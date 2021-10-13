@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>vue 指令 | wjl-blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="123451. vue介绍:	由尤雨溪创建的一个数据驱动框架(2016年加入阿里团队,目前人在国内)	目前国内的顶流之一(react, vue)	特点: 组件化开发 数据驱动  MVVM    简单高效 123456782. vue项目创建:	2.1 下载官方脚手架		yarn global add @vue&#x2F;cli       &#x2F;&#x2F;只需要安装1次	2.2 使用脚手架命令创建项目		vue cre">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue 指令">
+<meta property="og:url" content="https://call-blueming.github.io/2021/10/12/vue1day/index.html">
+<meta property="og:site_name" content="wjl-blog">
+<meta property="og:description" content="123451. vue介绍:	由尤雨溪创建的一个数据驱动框架(2016年加入阿里团队,目前人在国内)	目前国内的顶流之一(react, vue)	特点: 组件化开发 数据驱动  MVVM    简单高效 123456782. vue项目创建:	2.1 下载官方脚手架		yarn global add @vue&#x2F;cli       &#x2F;&#x2F;只需要安装1次	2.2 使用脚手架命令创建项目		vue cre">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-12T12:21:52.132Z">
+<meta property="article:modified_time" content="2021-10-13T01:01:15.783Z">
+<meta property="article:author" content="wjl">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="wjl-blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">wjl-blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://call-blueming.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-vue1day" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/12/vue1day/" class="article-date">
+  <time class="dt-published" datetime="2021-10-12T12:21:52.132Z" itemprop="datePublished">2021-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      vue 指令
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. vue介绍:</span><br><span class="line">	由尤雨溪创建的一个数据驱动框架(2016年加入阿里团队,目前人在国内)</span><br><span class="line">	目前国内的顶流之一(react, vue)</span><br><span class="line">	特点: 组件化开发 数据驱动  MVVM    简单高效</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">2. vue项目创建:</span><br><span class="line">	2.1 下载官方脚手架</span><br><span class="line">		yarn global add @vue/cli       //只需要安装1次</span><br><span class="line">	2.2 使用脚手架命令创建项目</span><br><span class="line">		vue create 项目名   </span><br><span class="line">	2.3 启动项目</span><br><span class="line">		cd 项目  </span><br><span class="line">		yarn serve</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">3. vue项目结构</span><br><span class="line">	.git   -- git版本库文件</span><br><span class="line">	node_modules  -- 项目依赖插件</span><br><span class="line">	public  -- 入口index页面</span><br><span class="line">	**src -- vue核心代码(核心关注点)</span><br><span class="line">	.gitignore -- git忽略上传文件</span><br><span class="line">	babel.config.js  -- 语法转译插件配置文件(已经配置好了) </span><br><span class="line">	package.json -- 项目描述文件</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">4. 新生代高效开发模式: 组件化开发</span><br><span class="line">               HTML发开模式1.0</span><br><span class="line">		传统开发,1个网页有3个文件(html,css,js),维护困难,效率低下</span><br><span class="line"></span><br><span class="line">	组件化开发模式2.0</span><br><span class="line">		组件:封装起来具有独立功能的UI部件</span><br><span class="line">		采用组件化开发模式后,我们书写的一个页面就是一个组件!</span><br><span class="line">		//------组件化开发可以大幅度提升维护和开发效率,团队协作更容易--------//</span><br><span class="line"></span><br><span class="line">		组件特点: 可重用 可任意组合 易维护</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><p>vue组件开发<br> 新建组件</p>
+<pre><code> 1. 新建一个.vue组件文件(首字母大写)
+ 2. 书写组件的结构,样式,行为
+     &lt;template&gt;&lt;/template&gt; //组件的结构
+     &lt;style scoped&gt;&lt;/style&gt;  //scoped: 此组件的样式唯一, 只对当前组件生效,不会影响其他组件 
+     &lt;script&gt;&lt;/script&gt;   //组件的数据函数等 
+</code></pre>
+<p> 使用组件</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">1. 初始化渲染组件</span><br><span class="line">	main.js</span><br><span class="line">	import 组件 from &#x27;./路径&#x27;</span><br><span class="line">	render: h =&gt; h( 要渲染的组件 )</span><br><span class="line"></span><br><span class="line">2. 在组件中使用其他组件</span><br><span class="line">	A.vue </span><br><span class="line">	2.1 引入其他组件</span><br><span class="line">		import B from &#x27;./B的路径&#x27;</span><br><span class="line">	2.2 注册自定义组件</span><br><span class="line">		export default &#123;</span><br><span class="line">			components: &#123;</span><br><span class="line">				新的标签名称: 组件</span><br><span class="line">				bbb: B</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	2.3 使用&lt;&gt;标签渲染新注册的标签即可</span><br><span class="line">		&lt;bbb&gt;&lt;/bbb&gt;</span><br><span class="line">		&lt;bbb/&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">6. 数据驱动思想</span><br><span class="line">	把界面的关注点放在数据上, 通过改变数据更新视图</span><br><span class="line">	(开发者只需要关心哪些数据要变化, 并且抽取进行改变即可)</span><br><span class="line">	</span><br><span class="line">	数据驱动核心思想</span><br><span class="line">	6.1 找到要变化的数据,把它抽取到data中</span><br><span class="line">		data()&#123;</span><br><span class="line">			return &#123;  name: &#x27;xxx&#x27;, age: 20, bol: false &#125;</span><br><span class="line">		&#125;</span><br><span class="line">	6.2 使用&#123;&#123;&#125;&#125;或指令,把此数据渲染到视图上</span><br><span class="line">		&#123;&#123; name &#125;&#125;</span><br><span class="line">		v-if=&quot;bol&quot;</span><br><span class="line">		v-bind:title=&quot;age&quot;</span><br><span class="line">	6.3 通过this拿到数据,修改后,vue自动更新视图</span><br><span class="line">		this.name = &quot;李四&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>vue的常见指令<br> v-if: 进行DOM的增加/删除        底层: addChild()  removeChild()<br> v-show: 进行DOM的隐藏/显示   底层: display: none ,  display: ‘’<br> v-on: 给DOM绑定动态事件   缩写  @事件名=”methods的函数名”<br> v-bind: 给DOM绑定动态属性  缩写  :属性名=”动态的值”<br> v-text: 给DOM设置文本内容   === innerText<br> v-html: 给DOM设置文本内容,并解析标签  === innerHTML</p>
+<pre><code>        v-for: ???
+</code></pre>
+<p> v-model: ???</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://call-blueming.github.io/2021/10/12/vue1day/" data-id="ckuo4w2n80000woqx6sc7f88c" data-title="vue 指令" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/10/12/vue%E7%9A%84%E4%BB%8B%E7%BB%8D/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">vue 介绍</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/10/12/vue1day/">vue 指令</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/12/vue%E7%9A%84%E4%BB%8B%E7%BB%8D/">vue 介绍</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 wjl<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
